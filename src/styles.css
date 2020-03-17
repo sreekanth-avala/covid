@@ -1,0 +1,113 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+.display-inner {
+    /* border: 2px solid #48c7ec; */
+    transition: .3s;
+    background: rgba(255, 255, 255, 0.445) none repeat scroll 0 0;
+    border: 2px solid transparent;
+
+}
+.in1{
+    box-shadow: 0px 5px 10px 0px rgba(0, 26, 255, 0.397);
+}
+.in2{
+    box-shadow: 0px 5px 10px 0px rgba(255, 0, 0, 0.397);
+}
+.in3{
+    box-shadow: 0px 5px 10px 0px rgba(27, 177, 39, 0.397);
+}
+.in1 h4{
+    color:rgb(0, 26, 255);
+}
+.in2 h4{
+    color:rgb(255, 0, 0);
+}
+.in3 h4{
+    color:rgb(19, 124, 27);
+}
+
+
+.our-display-text {
+    padding-right: 10px;
+    color:#48c7ec
+}
+
+.our-display-text {
+    overflow: hidden;
+    padding: 10px 0 25px;
+}
+
+.our-display-text h4 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    position: relative;
+    text-transform: uppercase;
+    
+}
+
+.our-display-text p {
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 42px;
+    font-weight:bolder;
+    line-height: 26px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.title {
+    color: rgb(248, 14, 158);
+    text-transform: uppercase;
+    font-family: Comic Sans;
+    text-shadow: 2px 2px 2px #CCCCCC;
+    letter-spacing: 1px;
+  }
+
+  .title small {
+    color: rgba(0, 0, 255, 0.459);
+    font-size: 16px;
+    text-shadow: 1px 1px 1px #CCCCCC;
+  }
+
+  .sub-t {
+    margin-top: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgba(5, 5, 5, 0.568)
+  }
+
+  .update {
+    font-size: 14px;
+    color: rgba(5, 5, 5, 0.568)
+  }
+
+  .row h6 {
+    color: rgba(5, 5, 5, 0.568)
+  }
+
+  select {
+    font-weight: 700;
+    background: #FFEFBA;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #FFEFBA);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+  .its-me a{
+   color:rgb(34, 159, 163);
+   letter-spacing: 1px;
+   font-family:cursive
+  }
+  .its-me small{
+    color:black;
+  }

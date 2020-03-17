@@ -1,0 +1,62 @@
+<div class="container">
+  <div class='text-center'>
+    <h3 class='title'><small>welcome to</small><br> corona Live status</h3>
+    <h5 class='sub-t'>Get Information about the anomalies brought about by Covid19 or Corona Virus</h5>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <h6 class='text-left'>choose a place</h6>
+      <select class="form-control " (change)="onCountrySelect($event.target.value)">
+        <option value='world'> Entire World</option>
+        <option *ngFor='let key of countryDetail' [value]="key.CountryCode">
+          {{key.Country}}
+        </option>
+      </select>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <h5 class='update'>Last Update :<b> {{lastUpdated}} </b></h5> <br>
+  <div class="row">
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+      <div class="our-display-wrapper mb-60">
+        <div class="display-inner in1 text-center">
+          <div class="our-display-text">
+            <h4>confirmed</h4>
+            <p>{{confirmed}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+      <div class="our-display-wrapper mb-60">
+        <div class="display-inner in2 text-center">
+          <div class="our-display-text">
+            <h4>Deaths</h4>
+            <p>{{deaths}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+      <div class="our-display-wrapper mb-60">
+        <div class="display-inner in3 text-center">
+          <div class="our-display-text">
+            <h4>Recovered</h4>
+            <p>{{recovered}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class='text-center'>
+    <h5 class='its-me'><small>Made by </small> <b> <a href="https://github.com/sreekanth-avala">Sreekanth.Avala</a> </b></h5>
+  </div>
+
+</div>
