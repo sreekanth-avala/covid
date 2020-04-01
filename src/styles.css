@@ -56,7 +56,7 @@
     margin-bottom: 0;
 }
 
-p {
+.row p {
     font-size: 42px;
     font-weight:bolder;
     line-height: 26px;
@@ -104,9 +104,9 @@ p {
 
   }
   .its-me a{
-   color:rgb(34, 159, 163);
+   color:rgb(12, 151, 19);
    letter-spacing: 1px;
-   font-family:cursive
+   font-family:'Courier New', Courier, monospace;
   }
   .its-me small{
     color:black;

@@ -1,6 +1,6 @@
 <div class="container">
   <div class='text-center'>
-    <h3 class='title'><small>welcome to</small><br> corona Live status</h3>
+    <h3 class='title'><small>welcome to</small><br> corona Live Activity</h3>
     <h5 class='sub-t'>Get Information about the anomalies brought about by Covid19 or Corona Virus</h5>
   </div>
   <br>
@@ -19,7 +19,8 @@
   <br>
   <br>
 
-  <h5 class='update'>Last Update :<b> {{lastUpdated}} </b></h5> <br>
+  <h5 class='update'>Last Updated :<b> {{lastUpdated}} </b></h5> <br>
+
   <div class="row">
     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
       <div class="our-display-wrapper mb-60">
@@ -27,6 +28,17 @@
           <div class="our-display-text">
             <h4>confirmed</h4>
             <p>{{confirmed}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+      <div class="our-display-wrapper mb-60">
+        <div class="display-inner in3 text-center">
+          <div class="our-display-text">
+            <h4>Recovered</h4>
+            <p>{{recovered}}</p>
           </div>
         </div>
       </div>
@@ -41,22 +53,187 @@
         </div>
       </div>
     </div>
-    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-      <div class="our-display-wrapper mb-60">
-        <div class="display-inner in3 text-center">
-          <div class="our-display-text">
-            <h4>Recovered</h4>
-            <p>{{recovered}}</p>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
   <hr>
+  <div class="container-ind">
+      <h4 class="text-center"><b>INDIA COVID-19 STATUS </b></h4>
+      <h6 class="text-center text-success">( <small>LAST UPDATED</small> :{{stateLastUpdated}} MINUTES AGO )</h6>
 
-  <div class='text-center'>
-    <h5 class='its-me'><small>Made by </small> <b> <a href="https://github.com/sreekanth-avala">Sreekanth.Avala</a> </b></h5>
+    <div class="row">
+      <div class="col-md-3 mt-3">
+        <div class="card border-blue mx-sm-1">
+          <div class="fontBlue text-center">
+            <h1>{{indConfirmed}}</h1>
+          </div>
+          <div class="fontBlue text-center">
+            <h5>CONFIRMED</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-3">
+        <div class="card border-red mx-sm-1">
+          <div class="fontRed text-center">
+          <h1>{{indDeaths}}</h1>
+          </div>
+          <div class="fontRed text-center">
+            <h5>DEATHS</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-3 ">
+        <div class="card border-green mx-sm-1">
+          <div class="fontGreen text-center ">
+            <h1>{{indRecovered}}</h1>
+          </div>
+          <div class="fontGreen text-center ">
+            <h5>RECOVERED</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-3">
+        <div class="card border-pink mx-sm-1">
+          <div class="fontPink text-center ">
+            <h1>{{indActive}}</h1>
+          </div>
+          <div class="fontPink text-center ">
+            <h5>ACTIVE</h5>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
+  <hr>
+
 
 </div>
+
+<h5 class="text-center p-2 s-title">STATE-WISE IN INDIA</h5>
+<div class="top_wrapper">
+  <div class="top_c_container text-center">
+    <table class="table no-border custom_table dataTable no-footer dtr-inline">
+      <thead>
+        <tr>
+          <th class="text-center">State</th>
+          <th class="text-center fontBlue">Confirmed</th>
+          <th class="text-center fontRed">Deaths</th>
+          <th class="text-center fontGreen">Recoverd</th>
+          <th class="text-center fontPink">Active</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let key of stateswiseDetails">
+          <td>{{key.state}}</td>
+          <td class="fontBlue font-weight-bold">{{key.confirmed}}</td>
+          <td class="fontRed font-weight-bold">{{key.deaths}}</td>
+          <td class="fontGreen font-weight-bold">{{key.recovered}}</td>
+          <td class="fontPink font-weight-bold">{{key.active}}</td>
+
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<style>
+  .container-ind {
+    background: whitesmoke;
+    padding: 30px 10px;
+  }
+  .container-ind h1{
+    font-weight:bolder !important;
+  }
+  .s-title{
+    border: 1px solid #d8cece;
+    background:rgba(231, 255, 95, 0.774);
+    border-radius: 10px;
+    margin: 1%;
+    font-weight: bold;
+
+  }
+
+  .top_wrapper {
+    background: #f5f5f5;
+    margin: 1%;
+  }
+
+  .custom_table {
+    border-collapse: separate;
+    border-spacing: 0 20px;
+    margin-top: -3px !important;
+  }
+
+  .custom_table tr td,
+  .custom_table tr th {
+    background: #fff none repeat scroll 0 0;
+    border-top: 0 none !important;
+    margin-bottom: 20px;
+    padding: 5px 1px;
+    text-transform: uppercase;
+    font-size: 10px;
+  }
+  @media only screen and (min-width: 600px) {
+    .custom_table tr td,
+  .custom_table tr th {
+    font-size: 16px;
+  }
+}
+
+  .top_wrapper table tr td,
+  .custom_table tr th {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    text-align: center;
+    /* font-weight:500; */
+  }
+
+  .fontRed {
+    color: red
+  }
+
+  .fontGreen {
+    color: green
+  }
+
+  .fontBlue {
+    color: blue
+  }
+
+  .fontPink {
+    color: rgb(255, 0, 157)
+  }
+
+  .border-blue {
+    border-color: rgba(0, 0, 255, 0.5);
+  }
+
+  .border-green {
+    border-color: rgba(0, 128, 0, 0.5);
+  }
+
+  .border-red {
+    border-color: rgba(255, 0, 0, 0.5);
+  }
+
+  .border-pink {
+    border-color: rgba(255, 0, 157, 0.5);
+  }
+</style>
+
+
+
+<div class='source m-4'>
+  <span class="text-muted">world data collected from <a href="https://covid19.mathdro.id/api">covid19.mathdro.id/api</a></span> <br>
+  <span class="text-muted">Statewise data (Unofficial data) collected from <a href="https://api.rootnet.in/">api.rootnet.in</a></span>
+
+</div>
+<hr>
+<div class='text-center mt-3 mb-3 '>
+  <h5 class='its-me'><small>Made by </small> <b> <a href="https://github.com/sreekanth-avala">Sreekanth.Avala</a> </b>
+  </h5>
+</div>
+<hr>
+
